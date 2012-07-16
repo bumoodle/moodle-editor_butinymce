@@ -88,7 +88,7 @@
 						t._resizeIframe(ed, tbIds[j], 26);
 					}
 				}
-				cm.setActive('pdw_toggle', Toggle_PDW);
+				cm.setActive('pdw_toggle', !Toggle_PDW);
 				ed.settings.pdw_toggle_on = Toggle_PDW;
 				Toggle[ed.id] = Toggle_PDW;
 				Cookie.setHash("TinyMCE_toggle", Toggle);
@@ -120,7 +120,7 @@
 					for(i = 0; i < toolbars.length; i++){
 						tbId = ed.getParam('', 'toolbar' + (toolbars[i]).replace(' ',''));
 						id = ed.controlManager.get(tbId).id;
-						cm.setActive('pdw_toggle', 1);
+						cm.setActive('pdw_toggle', 0);
 						DOM.hide(id);
 						t._resizeIframe(ed, tbId, 26);
 					}
@@ -156,3 +156,4 @@
 	// Register plugin
 	tinymce.PluginManager.add('pdw', tinymce.plugins.pdw);
 })();
+
