@@ -179,12 +179,12 @@ class butinymce_texteditor extends texteditor {
 
         if (empty($options['legacy'])) {
             if (isset($options['maxfiles']) and $options['maxfiles'] != 0) {
-                $params['file_browser_callback'] = "M.editor_butinymce.filepicker";
+                $params['file_browser_callback'] = "M.editor_tinymce.filepicker";
             }
         }
         //Add onblur event for client side text validation
         if (!empty($options['required'])) {
-            $params['init_instance_callback'] = 'M.editor_butinymce.onblur_event';
+            $params['init_instance_callback'] = 'M.editor_tinymce.onblur_event';
         }
         return $params;
     }
