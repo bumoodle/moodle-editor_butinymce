@@ -152,9 +152,9 @@ class butinymce_texteditor extends texteditor {
                     'theme_advanced_statusbar_location' => "none",
                     'spellchecker_rpc_url' => $CFG->wwwroot."/lib/editor/butinymce/tiny_mce/$this->version/plugins/spellchecker/rpc.php",
                     'spellchecker_languages' => get_config('editor_butinymce', 'spelllanguagelist'),
-                    //'auto_resize' => true
                     'pdw_toggle_on' => 1,
-                    'pdw_toggle_toolbars' => '2, 3'
+                    'pdw_toggle_toolbars' => '2, 3',
+                    'gecko_spellcheck' => true
                   );
 
         if ($xemoticon) {
